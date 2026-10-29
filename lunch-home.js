@@ -29,6 +29,19 @@ document.getElementById("confirmBtn").addEventListener("click", () =>
 
     const person = selectedPerson.value;
 
-    alert(person + " answered: " + eatingHome);
+    fetch("https://script.google.com/macros/s/AKfycbymIWeoXFhASXZalY2o0Tv2_EqnKcsxdDu4jiSzamt9RDS72uVCytImV7u1koVhMKm8/exec", {
+        method: "POST",
+        body: JSON.stringify({
+            person: person,
+            answer: eatingHome
+        })
+    })
+    .then(() => {
+        alert("Response saved!");
+    })
+    .catch((error) => {
+        console.log(error);
+        alert("Error saving response.");
+    });
 })
 
