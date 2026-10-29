@@ -32,4 +32,3 @@ document.getElementById("confirmBtn").addEventListener("click", () =>
     alert(person + " answered: " + eatingHome);
 })
 
-// creating a google apps script connected to this sheet
