@@ -36,7 +36,8 @@ document.getElementById("confirmBtn").addEventListener("click", () =>
             answer: eatingHome
         })
     })
-    .then(() => {
+    .then((response) => {
+        console.log(response.status);
         alert("Response saved!");
     })
     .catch((error) => {
